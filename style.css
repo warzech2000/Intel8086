@@ -1,0 +1,85 @@
+*{
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: aliceblue;
+  
+}
+
+input {
+    background-color: rgb(49, 49, 49);
+    border-radius: 5%;
+}
+
+.break{
+    margin-top: 70px;
+   height: 200px;
+   width: 300px;
+}
+#container {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(29, 29, 29);
+}
+
+#text {
+    padding-top: 50px;
+    margin-bottom: 40px;
+    color: hsl(69, 100%, 50%);
+    font-size: 25px;
+    word-spacing: 120%;
+}
+
+
+#top {
+    width: 900px;
+    float: left;
+    font-size: 22px;
+    text-align: center;
+}
+
+
+#midreg {
+    width: 30%;
+    float: left;
+}
+
+#righreg {
+    height: 89%;
+    width: 40%;
+    float: left;
+    font-size: 20px;
+
+}
+
+#funcbtns {
+    width: 30%;
+    margin-top: auto;
+   float: left;
+}
+#ax,
+#bx,
+#cx,
+#dx {
+    text-transform: uppercase;
+}
+
+#button1,
+#button2,
+#button3,
+#button4 {
+    height: 80px;
+    width: 200px;
+    font-size: 15px;
+    color: rgb(255, 0, 0);
+}
+
+#button5 {
+    height: 45px;
+    width: 200px;
+    margin-left: 30px;
+    font-size: 35px;
+    color: rgb(255, 8, 0);
+    text-transform: uppercase;
+}

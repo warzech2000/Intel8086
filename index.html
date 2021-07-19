@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>Bartosz Warzecha</title>
+</head>
+
+<body>
+    <div id="container">
+        <div>
+            <div id="top">
+                <p id="text">Symulator INTEL 8086</p>
+                <div id="funcbtns">
+                    <br>
+                    <input type="button" id="button1" value="MOV" id="MOV" onclick="copy()"><br><br>
+                    <input type="button" id="button2" value="XCHG" onclick="change()"> <br><br>
+                    <input type="button" id="button3" value="Resetuj" onclick="reset()"><br><br>
+                    <input type="button" id="button4" value="Losuj" onclick="random()">
+                </div>
+
+                <div id="midreg">
+                    <br>
+                    <span>AX:</span> <input type="text" name="ax" id="ax" disabled="disabled" size="7px"
+                        placeholder="0000"><br><br>
+                    <span>BX:</span> <input type="text" name="bx" id="bx" disabled="disabled" size="7px"
+                        placeholder="0000"><br><br>
+                    <span>CX:</span> <input type="text" name="cx" id="cx" disabled="disabled" size="7px"
+                        placeholder="0000"><br><br>
+                    <span>DX:</span> <input type="text" name="dx" id="dx" disabled="disabled" size="7px"
+                        placeholder="0000"><br><br>
+                    <br><br><br>
+
+                    <div class="break">
+                        <span>Z:&nbsp;&nbsp;&nbsp;&nbsp;Do:</span><br>
+                        <span>Pusty:</span> <label> <input type="radio" name="full1" id="empty1"></label>&nbsp;
+                        <span>Pusty:</span> <label> <input type="radio" name="full2" id="empty2"></label><br>
+                       
+
+                        <span>AX</span> <label> <input type="radio" name="full1" id="ax1" value="ax1"> </label>&nbsp;
+                        <span>AX</span> <label> <input type="radio" name="full2" id="ax2" value="ax2"> </label> <br>
+
+                        <span>BX:</span> <label><input type="radio" name="full1" id="bx1" value="bx1"> </label>&nbsp;
+                        <span>BX:</span> <label> <input type="radio" name="full2" id="bx2" value="bx2"> </label> <br>
+
+                        <span>CX:</span> <label> <input type="radio" name="full1" id="cx1" value="cx1"> </label>&nbsp;
+                        <span>CX:</span> <label> <input type="radio" name="full2" id="cx2" value="cx2"> </label><br>
+
+                        <span>DX:</span> <label> <input type="radio" name="full1" id="dx1" value="dx1"> </label>&nbsp;
+                        <span>DX:</span> <label> <input type="radio" name="full2" id="dx2" value="dx2"> </label>
+
+                    </div>
+
+                </div>
+
+
+                <div id="righreg">
+                    <br>
+
+                    <span>AH:</span> <input type="text" name="ah" id="ah" maxlength="2" size="7px" placeholder="00">
+                    <span>AL:</span> <input type="text" name="al" id="al" maxlength="2" size="7px" placeholder="00">
+                    <br><br><br>
+
+                    <span>BH:</span><input type=" text" name="bh" id="bh" maxlength="2" size="7px" placeholder="00">
+                    <span>BL:</span><input type=" text" name="bl" id="bl" maxlength="2" size="7px" placeholder="00">
+                    <br><br><br>
+
+                    <span>CH:</span><input type="text" name="ch" id="ch" maxlength="2" size="7px" placeholder="00">
+                    <span>CL:</span><input type="text" name="cl" id="cl" maxlength="2" size="7px"
+                        placeholder="00"><br><br><br>
+
+                    <span>DH:</span><input type="text" name="dh" id="dh" maxlength="2" size="7px" placeholder="00">
+                    <span>DL:</span><input type="text" name="dl" id="dl" maxlength="2" size="7px"
+                        placeholder="00"><br><br>
+                    <input type="button" id="button5" value="Zastosuj" onclick=confirm()>
+                    <br> <br>
+                    <span>Z:&nbsp;&nbsp;&nbsp;&nbsp;Do:</span><br>
+
+                    <span>Pusty:</span> <label> <input type="radio" name="half1" id="empty3"></label>&nbsp;
+                    <span>Pusty:</span> <label> <input type="radio" name="half2" id="empty4"></label><br>
+
+                    <span>AH:</span> <label> <input type="radio" name="half1" id="ah1"></label>&nbsp;
+                    <span>AH:</span> <label> <input type="radio" name="half2" id="ah2"></label><br>
+
+                    <span>BH:</span><label><input type="radio" name="half1" id="bh1"></label>&nbsp;
+                    <span>BH:</span> <label><input type="radio" name="half2" id="bh2"></label><br>
+
+                    <span>CH:</span> <label><input type="radio" name="half1" id="ch1"></label>&nbsp;
+                    <span>CH:</span> <label><input type="radio" name="half2" id="ch2"></label><br>
+
+                    <span>DH:</span> <label><input type="radio" name="half1" id="dh1"></label>&nbsp;
+                    <span>DH:</span> <label><input type="radio" name="half2" id="dh2"></label><br>
+
+                    <span>AL:</span> <label> <input type="radio" name="half1" id="al1"></label>&nbsp;
+                    <span>AL:</span> <label> <input type="radio" name="half2" id="al2"></label><br>
+
+                    <span>BL:</span><label><input type="radio" name="half1" id="bl1"></label>&nbsp;
+                    <span>BL:</span> <label><input type="radio" name="half2" id="bl2"></label><br>
+
+                    <span>CL:</span> <label><input type="radio" name="half1" id="cl1"></label>&nbsp;
+                    <span>CL:</span> <label><input type="radio" name="half2" id="cl2"></label><br>
+
+                    <span>DL:</span> <label><input type="radio" name="half1" id="dl1"></label>&nbsp;
+                    <span>DL:</span> <label><input type="radio" name="half2" id="dl2"></label>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="/main.js"></script>
+</body>
+
+</html>
